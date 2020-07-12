@@ -1,333 +1,462 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Chaojie&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Chaojie&#39;s Blog">
+<meta property="og:locale" content="zh">
+<meta property="article:author" content="Chaojie Lai">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh'
+  };
+</script>
+
+  <title>Chaojie's Blog</title>
   
 
-  
-  <title>little rookie blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="little rookie blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="little rookie blog">
-<meta property="og:locale" content="zh">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="little rookie blog">
-  
-    <link rel="alternate" href="/atom.xml" title="little rookie blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Chaojie's Blog" type="application/atom+xml">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">little rookie blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Notes-about-Fluent-Python-Part-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/12/Notes-about-Fluent-Python-Part-1/" class="article-date">
-  <time datetime="2019-12-12T12:15:28.000Z" itemprop="datePublished">2019-12-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/12/Notes-about-Fluent-Python-Part-1/">Notes about Fluent Python Part 1</a>
-    </h1>
-  
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Python 官方文档早已扫过一遍，断断续续也写了两年多的 Python 代码了，但还是觉得缺了什么。没有整体感，这是出现在我头脑里的第一个想法。或许是到了需要进阶一下的时候，所以有了这些读书笔记 —— 关于 <a href="https://book.douban.com/subject/26278021//" target="_blank" rel="noopener">Fluent Python</a>。以下是第一部分。</p>
-<h2 id="Chapter-1-The-Python-Data-Model"><a href="#Chapter-1-The-Python-Data-Model" class="headerlink" title="Chapter 1 The Python Data Model"></a>Chapter 1 The Python Data Model</h2><blockquote>
-<p>Object are Python’s abstraction for data. All data in a Python program is represented by objects or by relations between objects. In a sense, and in conformance to Von Neumann’s model of a “Stored Program Computer”, Code is also represented by objects.</p>
-</blockquote>
-<p>我一开始理解这部分的时候，老是去想它的具体实现方式（可能是受 C++ 学习经验的影响）。但其实它这里想表述的是 Python 所构建的那个体系，它是如何去抽象现实世界里的事物的，注意它上面说的是 abstraction，与抽象相对应的是具体，也就是实现（下一层的实现可以是 CPython，JPython等）。但这里只说抽象，也就是只谈 Python 体系的结构。理解了这一点，一切都顺理成章。</p>
-<p>Python Data Model 中最亮眼的就是：special method，让它变得极易扩展？（这里会补充对比例子，同一种功能实现，对比 Python 和 C++，Java）。</p>
-<h2 id="Chapter-2-An-Array-of-Sequences"><a href="#Chapter-2-An-Array-of-Sequences" class="headerlink" title="Chapter 2 An Array of Sequences"></a>Chapter 2 An Array of Sequences</h2><blockquote>
-<p>Python中的 Sequence 有两种常见的分类方式：<br>    mutable sequence vs immutable sequence<br>    container sequence(存引用） vs flat sequence（存值）</p>
-</blockquote>
-<blockquote>
-<p>mutable sequence 如 list, array.array, bytearray<br>immutable sequence 如 tuple、str、bytes</p>
-</blockquote>
-<p>可变和不可变 指的是 它所指的那个 Python 对象是不变的，即 id(obj) 不变，但它的值你是无法保证不改变的。如 t = （[1],[2]), t 是 tuple，但 t 的内容明显是可变的，t[0].append(3)是可行的。</p>
-<h3 id="listcomps-amp-genexps"><a href="#listcomps-amp-genexps" class="headerlink" title="listcomps &amp; genexps"></a>listcomps &amp; genexps</h3><p>只需要记住一点：如果你需要的是建立一个新列表，那么你首先应该考虑用 listcomps 来写。（but why ？）</p>
-<p>创建其他 iterable 的对象时，则首先考虑用 genexps 来写。</p>
-<h3 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h3><h4 id="Tuples-as-Records"><a href="#Tuples-as-Records" class="headerlink" title="Tuples as Records"></a>Tuples as Records</h4><p>配合 tuple unpacking（* syntax） 和 namedtuple，用起来简直不要太爽。</p>
-<p>* syntax 主要用在两个地方</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; divmod(20, 8) </span><br><span class="line">(2, 4) </span><br><span class="line">&gt;&gt;&gt;t=(20,8) </span><br><span class="line">&gt;&gt;&gt; divmod(*t) </span><br><span class="line">(2, 4)</span><br><span class="line">&gt;&gt;&gt; quotient, remainder = divmod(*t) </span><br><span class="line">&gt;&gt;&gt; quotient, remainder</span><br><span class="line">(2, 4)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; a, *body, c, d = range(5) </span><br><span class="line">&gt;&gt;&gt; a, body, c, d</span><br><span class="line">(0, [1, 2], 3, 4)</span><br><span class="line">&gt;&gt;&gt; *head, b, c, d = range(5) </span><br><span class="line">&gt;&gt;&gt; head, b, c, d</span><br><span class="line">([0, 1], 2, 3, 4)</span><br><span class="line"></span><br><span class="line">copy from the book</span><br></pre></td></tr></table></figure>
-<p>namedtuple 以下一个例子基本足够：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from collections import namedtuple</span><br><span class="line">&gt;&gt;&gt; City = namedtuple(&apos;City&apos;, &apos;name country population coordinates&apos;)</span><br><span class="line">&gt;&gt;&gt; tokyo = City(&apos;Tokyo&apos;, &apos;JP&apos;, 36.933, (35.689722, 139.691667))</span><br><span class="line">&gt;&gt;&gt; tokyo</span><br><span class="line">City(name=&apos;Tokyo&apos;, country=&apos;JP&apos;, population=36.933, coordinates=(35.689722, 139.691667))</span><br><span class="line">&gt;&gt;&gt; tokyo.population</span><br><span class="line">36.933</span><br><span class="line">&gt;&gt;&gt; tokyo.coordinates</span><br><span class="line">(35.689722, 139.691667)</span><br><span class="line">&gt;&gt;&gt; tokyo[1]</span><br><span class="line">&apos;JP&apos;</span><br><span class="line">&gt;&gt;&gt; City._fields</span><br><span class="line">(&apos;name&apos;, &apos;country&apos;, &apos;population&apos;, &apos;coordinates&apos;)</span><br><span class="line">&gt;&gt;&gt; LatLong = namedtuple(&apos;LatLong&apos;, &apos;lat long&apos;)</span><br><span class="line">&gt;&gt;&gt; delhi_data = (&apos;Delhi NCR&apos;, &apos;IN&apos;, 21.935, LatLong(28.613889, 77.208889)) &gt;&gt;&gt; delhi = City._make(delhi_data)</span><br><span class="line">&gt;&gt;&gt; delhi._asdict()</span><br><span class="line">OrderedDict([(&apos;name&apos;, &apos;Delhi NCR&apos;), (&apos;country&apos;, &apos;IN&apos;), (&apos;population&apos;, 21.935), (&apos;coordinates&apos;, LatLong(lat=28.613889, long=77.208889))])</span><br><span class="line">&gt;&gt;&gt; for key, value in delhi._asdict().items():</span><br><span class="line">        print(key + &apos;:&apos;, value)</span><br><span class="line"></span><br><span class="line">name: Delhi NCR</span><br><span class="line">country: IN</span><br><span class="line">population: 21.935</span><br><span class="line">coordinates: LatLong(lat=28.613889, long=77.208889)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">copy from the book</span><br></pre></td></tr></table></figure>
-<h4 id="Tuples-as-Immutable-Lists"><a href="#Tuples-as-Immutable-Lists" class="headerlink" title="Tuples as Immutable Lists"></a>Tuples as Immutable Lists</h4><p>pass(大家都很熟悉的用法，没有什么好说的</p>
-<h3 id="Slicing"><a href="#Slicing" class="headerlink" title="Slicing"></a>Slicing</h3><p>最值得注意的是，Naming a slice，如下面的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; DESCRIPTION = slice(6, 40)</span><br><span class="line">&gt;&gt;&gt; UNIT_PRICE = slice(40, 52)</span><br><span class="line">&gt;&gt;&gt; for item in line_items:</span><br><span class="line">...     print(item[UNIT_PRICE], item[DESCRIPTION])</span><br></pre></td></tr></table></figure>
-<p>多维的 slicing，numpy 中常用的逗号分隔（通过定义 <code>__getitem__ __set__item__</code>来实现）<br>在 numpy 中 <code>a[i][j] == a[i,j]</code></p>
-<h3 id="Augmented-Assignment-with-Sequence"><a href="#Augmented-Assignment-with-Sequence" class="headerlink" title="Augmented Assignment with Sequence"></a>Augmented Assignment with Sequence</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; weird_board = [[&apos;_&apos;] * 3] * 3</span><br><span class="line">&gt;&gt;&gt; weird_board</span><br><span class="line">[[&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;_&apos;]] </span><br><span class="line">&gt;&gt;&gt; weird_board[1][2] = &apos;O&apos;</span><br><span class="line">&gt;&gt;&gt; weird_board</span><br><span class="line">[[&apos;_&apos;, &apos;_&apos;, &apos;O&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;O&apos;], [&apos;_&apos;, &apos;_&apos;, &apos;O&apos;]]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Example 2-14. A riddle</span><br><span class="line">&gt;&gt;&gt; t=(1,2,[30,40]) </span><br><span class="line">&gt;&gt;&gt; t[2] += [50, 60]</span><br></pre></td></tr></table></figure>
-<h3 id="Managing-Ordered-Sequences-with-bisect"><a href="#Managing-Ordered-Sequences-with-bisect" class="headerlink" title="Managing Ordered Sequences with bisect"></a>Managing Ordered Sequences with bisect</h3><p>bisection(二分）<br>bisect.bisect,<br>bisect.insort</p>
-<blockquote>
-<p>Raymond Hettinger—a prolific Python contributor—has a Sorted Collection recipe that leverages the bisect module but is easier to use than these standalone functions. <a href="http://code.activestate.com/recipes/577197-sortedcollection/" target="_blank" rel="noopener">http://code.activestate.com/recipes/577197-sortedcollection/</a></p>
-</blockquote>
-<h3 id="When-a-List-IS-Not-the-Answer"><a href="#When-a-List-IS-Not-the-Answer" class="headerlink" title="When a List IS Not the Answer"></a>When a List IS Not the Answer</h3><p>Array<br>Memory Views<br>Numpy and SciPy</p>
-<p>Deque and other queues</p>
-<p>长度为 10 的 FIFO 队列（keep a list of “last seen items”），通过 maxlen 参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Example 2-23. Working with a deque</span><br><span class="line">&gt;&gt;&gt; from collections import deque</span><br><span class="line">&gt;&gt;&gt; dq = deque(range(10), maxlen=10)</span><br><span class="line">&gt;&gt;&gt; dq</span><br><span class="line">deque([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], maxlen=10) </span><br><span class="line">&gt;&gt;&gt; dq.rotate(3)</span><br><span class="line">&gt;&gt;&gt; dq</span><br><span class="line">deque([7, 8, 9, 0, 1, 2, 3, 4, 5, 6], maxlen=10) </span><br><span class="line">&gt;&gt;&gt; dq.rotate(-4)</span><br><span class="line">&gt;&gt;&gt; dq</span><br><span class="line">deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], maxlen=10) </span><br><span class="line">&gt;&gt;&gt; dq.appendleft(-1)</span><br><span class="line">&gt;&gt;&gt; dq</span><br><span class="line">deque([-1, 1, 2, 3, 4, 5, 6, 7, 8, 9], maxlen=10) </span><br><span class="line">&gt;&gt;&gt; dq.extend([11, 22, 33])</span><br><span class="line">&gt;&gt;&gt; dq</span><br><span class="line">deque([3, 4, 5, 6, 7, 8, 9, 11, 22, 33], maxlen=10) </span><br><span class="line">&gt;&gt;&gt; dq.extendleft([10, 20, 30, 40])</span><br><span class="line">&gt;&gt;&gt; dq</span><br><span class="line">deque([40, 30, 20, 10, 3, 4, 5, 6, 7, 8], maxlen=10)</span><br></pre></td></tr></table></figure>
-<p>Timsort（Python 里面的 list.sort 算法实现）</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/12/Notes-about-Fluent-Python-Part-1/" data-id="ck42t09kl00002mfphe80bsc0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-读感-《如何变得有思想-阮一峰博客文集》" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/24/读感-《如何变得有思想-阮一峰博客文集》/" class="article-date">
-  <time datetime="2018-11-24T10:45:19.000Z" itemprop="datePublished">2018-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/24/读感-《如何变得有思想-阮一峰博客文集》/">读感 《如何变得有思想 -- 阮一峰博客文集》</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这本书如作者在序言所说，是其2004~2013年读书笔记的选集，这些文章都曾发表在博客上。</p>
-<blockquote>
-<p>而选择《如何变得有思想》作为书名，只是想挑一个醒目的名字，整本书其实是一本涉猎广泛的笔记体文集</p>
-</blockquote>
-<p>以下是我的个人杂谈。</p>
-<h2 id="读《如何变得有思想》前传"><a href="#读《如何变得有思想》前传" class="headerlink" title="读《如何变得有思想》前传"></a>读《如何变得有思想》前传</h2><p>首先是我是如何了解有阮一峰这么一个人的？之前我曾把阮一峰和廖雪峰混淆，了解到廖雪峰自然是因为 Python，而接触到阮一峰却是一个巧合。</p>
-<p>事情是这样开始的。前年的这个时候，我还在图书馆准备12月的研究生招生考试。一如你所知，虽然我不至于悬梁刺股，大贴标语，但终究还是要整天待在图书馆做题，时间久了就枯燥无聊寂寞。所幸，在走廊对面，隔着两层玻璃窗，有一个美丽的女孩子，因为她每天基本都在那里，偶尔也碰到她在背诵什么，于是就猜想她应该也是在准备研究生考试。于是，疲惫无聊的时候，我就经常在走廊上隔空望她。之后，偶尔在图书馆碰面，越发觉得其美丽动人，真的是自己的理想型。还想着怎么搭讪？要说什么？于搭讪，一无胆量，二无技巧，三无经验，真不知如何是好呀。但终究是被她所吸引，就想尽可能地去了解她，想着了解得多一些，自然就会知道要说什么了吧。</p>
-<p>接着，神奇的事情发生了。我开始八点之前在图书馆门前等候，因为她也会在那里。有一次，我看到她在等候的时候，在读一本书，名字叫《如果在冬夜，一个旅人》，一开始读这个名字，我以为是类似《从你的全世界路过》的散文集。后面上网搜索之后，发现作者是卡尔维诺，而书的内容简介也大出乎我的意料。她喜欢看这样的书呀，但那时我并不知道卡尔维诺是谁，要不去看一下吧？于是在继续搜索卡尔维诺的过程中，发现了一个<a href="http://www.ruanyifeng.com/calvino/" target="_blank" rel="noopener">卡尔维诺中文站</a>，这里边有卡尔维诺的生平事迹，中英文电子书及其他相关资源。而后我好奇站长的来历，点击一下，就跳到了<a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">站长的博客</a>。没错，我就这样第一次接触到了阮一峰的博客。</p>
-<p>而后,他里面的两个文集标题（《前方的路》、《未来世界的幸存者》）也吸引了我，觉得应该会挺有意思的。但那时并没有进一步去读他的博客。</p>
-<p>下一次到他的博客，是几个月前。自己在搜索 “C 程序的编译过程” 时，跳到了他相关的一篇文章，那是我搜索看到的文章里，我最满意的一篇，觉得写得真好。紧接着去看谁写的，阮一峰？好熟悉的名字。然后才想到自己前年因为卡尔维诺来过这里。喜欢卡尔维诺的程序员？真不错，文章写得也不错，要不去看下他出的那几本书？于是，在图书馆搜索，借了这本书 ——《如何变得有思想》。</p>
-<h2 id="笔记、感想于《如何变得有思想》"><a href="#笔记、感想于《如何变得有思想》" class="headerlink" title="笔记、感想于《如何变得有思想》"></a>笔记、感想于《如何变得有思想》</h2><p>因为对阮一峰其人感兴趣，看了他的读书笔记之后，对他所介绍的书也有了兴趣。然后摘录了书里提到的书籍。清单如下：</p>
-<pre><code>禅与摩托车维修艺术 *
-杰米·加文斯基 日记 “the Netscape dorm”
-Paul Graham 文集 《黑客与画家》
-Hackers: Heroes of the Computer Revolution （经典）*
-迈克尔·S·哈特
-理查德·斯托曼 自由软件
-丹尼斯·里奇 C 语言创始人的教材 《C 编程语言》- 100多页
-Linux 林纳斯·托瓦兹 自传 Just For Fun *
-Glyn Moody. Rebel Code: Inside Linux and the Open Source Revolution.
-
-
-美丽新世界
-希特勒《我的奋斗》
-乔治·奥威尔 《动物庄园》、《1984》
-黄仁宇 《黄河青山：黄仁宇回忆录》
-徐中约（加州大学）《中国近代史》 *
-李鸿章其人
-《曾国藩家书》 很好的修身读物
-胡适 及《胡适口述自传》
-《世界是平的》
-
-
-济慈诗选 如《夜莺颂》
-鲁迅 文章
-《了不起的盖茨比》 原著语言太美了
-贝克特 《等待戈多》
-阿特伍德 《盲刺客》
-《约翰·克里斯多夫》傅雷译 什么是高贵的人格？
-托马斯·林奇 《殡葬人手记》 关于死与生，双重身份的作者：殡葬馆的老板及作家
-卡尔维诺* 随笔集 《看不见的城市》*
-《海子诗全编》三联出版社 *
-骆一禾 《世界的血》 （当我们谈及20世纪80年代的诗歌时，意味着什么？）
-巴尔扎克 《高老头》*
-米兰多拉 《论人的尊严》
-《恋爱中的爱因斯坦》 （爱因斯坦的私人生活，有点混乱，和罗素有的一拼）
-兰登书屋 100本20世纪最佳英文小说
-
-
-《富爸爸，穷爸爸》阮一峰在 2006-10-30 说 是过去10年最值得一看的出版物之一
-《两个幸运的人：弗里德曼回忆录》
-《进步与贫困》 亨利·乔治
-《最好的辩护》 艾伦·德肖维茨
-《异端的权利》
-梭罗
-语言的纯洁性及其他：余光中，乔治·奥威尔
-詹志宏 谈读书
-</code></pre><p>关于詹志宏 谈读书，我还发现他的书《旅行与读书》也不错。顺便关于旅行，还想到另外一本《旅行的艺术》，一并记在这里。</p>
-<p>书中提到的相关影视作品，清单如下：</p>
-<pre><code>纪录片 《奔腾的代码》
-乔布斯2005年斯坦福演讲
-电视剧 《欲望都市》
-电影 《罗马假日》
-电影 美丽心灵的永恒阳光
-电影 复仇者 V
-</code></pre><p>以下是摘录的一些句子：</p>
-<blockquote>
-<p>陈寅恪 “一生负气成今日，四海无人对夕阳”</p>
-</blockquote>
-<p>如何变得有思想</p>
-<blockquote>
-<p>如何变得有思想，无非也是在这几个方面加强努力：了解更多的背景知识，明确个人的价值观（也就是不要有模棱两可的态度，凡事追问自己到底是赞成还是反对，理由何在），培养自己的逻辑分析能力（方法之一就是多做数学题或者 GRE 逻辑题，或者多编程）。</p>
-</blockquote>
-<p>詹宏志</p>
-<blockquote>
-<p>詹宏志：我现在很少抱怨社会没有文化（我们选择出版这个工作不就是想改变这件事吗），我也很少抱怨一本书卖不好是社会大众的错。相反，我会相信那是我的错，我不是错估了社会，就是没有利用市场做对所有的事。<strong>如果想被市场接受，就要尽可能掌握社会的真相及其可能的行为</strong>。我不抱怨读者不接受我的书，我尽可能去了解读者真正的需求；我不抱怨银行不借钱给出版社，我努力去了解银行借钱的逻辑；我也不抱怨投资人眼中没有文化事业，我试着去找出投资人可以了解的文化事业价值。</p>
-<p>每个出版社的出现，都是因为有一本书没有人出。创业的动机就是有一个要证明的事情出现。如果我要做我自己相信的事，很难避免跟这社会意见不合。</p>
-<p>任何事情都放胆去做。现在这个时代，应该已经饿死不了人了吧！人们所面临的困境，多半也不是养不饱自己，而是自己的抱负没有获得实现、理念没办法采用等原因。<strong>因此，有机会就去尝试</strong>。……</p>
-</blockquote>
-<p>不妨思考一下，体制和个人</p>
-<p>人生真相 <a href="http://www.ruanyifeng.com/road/2006/2006-02-27-balzac.html" target="_blank" rel="noopener">原文</a></p>
-<p>A lonely drifter off to see the world.</p>
-<p>关于职业选择<br>见 <a href="http://www.ruanyifeng.com/road/2007/2007-02-13-hu-shih.html" target="_blank" rel="noopener">胡适的改行</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/24/读感-《如何变得有思想-阮一峰博客文集》/" data-id="ck42t09kq00022mfp4ciwkvd9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
     </div>
   </div>
 
+  <div class="site-meta">
 
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Chaojie's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/12/12/Notes-about-Fluent-Python-Part-1/">Notes about Fluent Python Part 1</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/24/读感-《如何变得有思想-阮一峰博客文集》/">读感 《如何变得有思想 -- 阮一峰博客文集》</a>
-          </li>
-        
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
       </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Chaojie Lai</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 acat<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+  </nav>
+</div>
+
+
+
+      </section>
     </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content index posts-expand">
+          
+      
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/12/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chaojie Lai">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chaojie's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/12/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" class="post-title-link" itemprop="url">heapq源码解读</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-07-12 08:41:48 / Modified: 16:36:40" itemprop="dateCreated datePublished" datetime="2020-07-12T08:41:48+08:00">2020-07-12</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>0</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chaojie Lai">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chaojie's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/09/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-05-09 16:37:29" itemprop="dateCreated datePublished" datetime="2018-05-09T16:37:29+08:00">2018-05-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-12 16:43:22" itemprop="dateModified" datetime="2020-07-12T16:43:22+08:00">2020-07-12</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>357</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+  
 
 
 
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chaojie Lai</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">0k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
