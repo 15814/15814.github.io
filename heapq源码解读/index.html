@@ -20,19 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Python标准库 heapq 是一个实现了最小堆（Min Heap）的库。其对于堆实现最值得注意的是其中的 _siftup  函数。 _siftup  函数 在 heappop函数中调用，因此，本文将从heappop函数开始解析，而后再解析_siftup  函数。 以下是 heappop 的源码。  123456789def heappop(heap):    &quot;&quot;&quot;Pop the smalle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/05/09/hello-world/index.html">
+<meta property="og:title" content="heapq源码解读">
+<meta property="og:url" content="http://yoursite.com/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/index.html">
 <meta property="og:site_name" content="Chaojie&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Python标准库 heapq 是一个实现了最小堆（Min Heap）的库。其对于堆实现最值得注意的是其中的 _siftup  函数。 _siftup  函数 在 heappop函数中调用，因此，本文将从heappop函数开始解析，而后再解析_siftup  函数。 以下是 heappop 的源码。  123456789def heappop(heap):    &quot;&quot;&quot;Pop the smalle">
 <meta property="og:locale" content="zh">
-<meta property="article:published_time" content="2018-05-09T08:37:29.920Z">
-<meta property="article:modified_time" content="2020-07-12T08:43:22.028Z">
+<meta property="og:image" content="http://yoursite.com/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/%E5%9B%BE1.jpeg">
+<meta property="article:published_time" content="2020-07-12T00:41:48.589Z">
+<meta property="article:modified_time" content="2020-07-13T08:53:22.463Z">
 <meta property="article:author" content="Chaojie Lai">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/%E5%9B%BE1.jpeg">
 
-<link rel="canonical" href="http://yoursite.com/2018/05/09/hello-world/">
+<link rel="canonical" href="http://yoursite.com/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/">
 
 
 <script id="page-configurations">
@@ -45,7 +47,7 @@
   };
 </script>
 
-  <title>Hello World | Chaojie's Blog</title>
+  <title>heapq源码解读 | Chaojie's Blog</title>
   
 
 
@@ -132,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -144,7 +146,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -157,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -195,7 +196,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -208,7 +209,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          heapq源码解读
         </h1>
 
         <div class="post-meta">
@@ -218,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-05-09 16:37:29" itemprop="dateCreated datePublished" datetime="2018-05-09T16:37:29+08:00">2018-05-09</time>
+              <time title="Created: 2020-07-12 08:41:48" itemprop="dateCreated datePublished" datetime="2020-07-12T08:41:48+08:00">2020-07-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 16:43:22" itemprop="dateModified" datetime="2020-07-12T16:43:22+08:00">2020-07-12</time>
+                <time title="Modified: 2020-07-13 16:53:22" itemprop="dateModified" datetime="2020-07-13T16:53:22+08:00">2020-07-13</time>
               </span>
 
           <br>
@@ -234,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>357</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -253,19 +254,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>Python标准库 heapq 是一个实现了最小堆（Min Heap）的库。其对于堆实现最值得注意的是其中的 <code>_siftup </code> 函数。 <code>_siftup </code> 函数 在 <code>heappop</code>函数中调用，因此，本文将从<code>heappop</code>函数开始解析，而后再解析<code>_siftup </code> 函数。</p>
+<p>以下是 <code>heappop</code> 的源码。 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">heappop</span><span class="params">(heap)</span>:</span></span><br><span class="line">    <span class="string">"""Pop the smallest item off the heap, maintaining the heap invariant."""</span></span><br><span class="line">    lastelt = heap.pop()    <span class="comment"># raises appropriate IndexError if heap is empty</span></span><br><span class="line">    <span class="keyword">if</span> heap:</span><br><span class="line">        returnitem = heap[<span class="number">0</span>]</span><br><span class="line">        heap[<span class="number">0</span>] = lastelt</span><br><span class="line">        _siftup(heap, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> returnitem</span><br><span class="line">    <span class="keyword">return</span> lastelt</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>如代码注释里所说，<code>heappop</code> 的作用就是从堆中弹出最小元素，并调整剩余元素让其还是一个堆。<code>heappop</code>从 heap 弹出元素的过程为：用 <code>heap.pop()</code> 弹出heap中最末尾的元素并赋值给lastelt（heapq中的heap就是一个list，故<code>heap.pop()</code>就是 <code>list.pop()</code> )，然后将<code>heap[0]</code>赋值给returnitem，而后用 lastelt 覆写heap[0]，调用<code>_siftup</code>进行调整。如图所示：<br><img src="heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/%E5%9B%BE1.jpeg"></p>
+<p><code>_siftup</code> 函数的作用是 从根节点开始一直向下调整堆，调整剩余元素使其成为一个堆。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_siftup</span><span class="params">(heap, pos)</span>:</span></span><br><span class="line">    endpos = len(heap)</span><br><span class="line">    startpos = pos</span><br><span class="line">    newitem = heap[pos]</span><br><span class="line">    <span class="comment"># Bubble up the smaller child until hitting a leaf.</span></span><br><span class="line">    childpos = <span class="number">2</span>*pos + <span class="number">1</span>    <span class="comment"># leftmost child position</span></span><br><span class="line">    <span class="keyword">while</span> childpos &lt; endpos:</span><br><span class="line">        <span class="comment"># Set childpos to index of smaller child.</span></span><br><span class="line">        rightpos = childpos + <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> rightpos &lt; endpos <span class="keyword">and</span> <span class="keyword">not</span> heap[childpos] &lt; heap[rightpos]:</span><br><span class="line">            childpos = rightpos</span><br><span class="line">        <span class="comment"># Move the smaller child up.</span></span><br><span class="line">        heap[pos] = heap[childpos]</span><br><span class="line">        pos = childpos</span><br><span class="line">        childpos = <span class="number">2</span>*pos + <span class="number">1</span></span><br><span class="line">    <span class="comment"># The leaf at pos is empty now.  Put newitem there, and bubble it up</span></span><br><span class="line">    <span class="comment"># to its final resting place (by sifting its parents down).</span></span><br><span class="line">    heap[pos] = newitem</span><br><span class="line">    _siftdown(heap, startpos, pos)</span><br></pre></td></tr></table></figure>
+<p><code>_siftup</code> 函数 与很多书籍提及的调整方法是不同的。</p>
+<p>本文所说的堆、Heap 默认是最小堆，即<code>a[0]</code>是堆中的最小元素。</p>
+<p>关于什么是最小堆，heapq 源码中的解释相当简洁明了：</p>
+<blockquote>
+<p>Heaps are arrays for which a[k] &lt;= a[2<em>k+1] and a[k] &lt;= a[2</em>k+2] for<br>all k, counting elements from 0.  For the sake of comparison,<br>non-existing elements are considered to be infinite.  The interesting<br>property of a heap is that a[0] is always its smallest element.<br><a href="https://github.com/python/cpython/tree/3.8/Lib/heapq.py" target="_blank" rel="noopener">https://github.com/python/cpython/tree/3.8/Lib/heapq.py</a></p>
+</blockquote>
 
     </div>
 
@@ -279,13 +280,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item"></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/12/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" rel="next" title="heapq源码解读">
-      heapq源码解读 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
       </footer>
     
   </article>
@@ -332,7 +326,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -341,7 +335,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">0k</span>
+    <span title="Symbols count total">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
