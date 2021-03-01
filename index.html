@@ -79,8 +79,10 @@
   .search-pop-overlay, .sidebar-nav { display: none; }
   .sidebar-panel { display: block; }
 
-  a.my-post-title-link:link{ color:#000099; font-size: 16px }
-  a.my-post-title-link:visted { color: #464646 }
+  .my-post-title-link:link{ color:#000099; font-size: 16px; }
+
+  a.my-post-title-link:visted { color: #464646; }
+  a.one:link{ color:#000099; font-size:16px; }
   </style>
 </noscript>
 
@@ -184,65 +186,29 @@
 
 
       <div class="main-inner">
-        
+        <div class="content archive"> 
+          <div class="post-block">
 
-        <div class="content archive">
-          
+            <article itemscope itemtype="http://schema.org/Article">
+            <header class="post-header">
 
-  
-  
-  
-  <div class="post-block">
-    <!-- <div class="posts-collapse"> -->
-<!--       <div class="collection-title">
-        <span class="collection-header">Um..! 1 post. Keep on posting.</span>
-      </div> -->
+            <div class="post-title">
+                <img src="https://sep.yimg.com/ca/I/paulgraham_2272_1423" width="12" height="16" align="left" border="0" hspace="0" vspace="6">
+                <!-- <a class="my-post-title-link" href="/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" itemprop="url" style="color:#000099; text-decoration-color:#000099; text-decoration:underline;"> -->
+                <a href="/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" itemprop="url">
+                  <span itemprop="name" style="color:#000099; font-size:16px" >heapq源码解读</span>
+                </a>
+            </div>
 
-      
-<!--     <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div> -->
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-<!--       <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-12T08:41:48+08:00"
-              content="2020-07-12">
-          07-12
-        </time>
-      </div> -->
-
-      <div class="post-title">
-          <img src="https://sep.yimg.com/ca/I/paulgraham_2272_1423" width="12" height="14" align="left" border="0" hspace="0" vspace="0">
-          <a class="my-post-title-link" href="/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" itemprop="url">
-            <span itemprop="name">heapq源码解读</span>
-          </a>
-          <img src="https://sep.yimg.com/ca/Img/trans_1x1.gif" height="2" width="1" border="0">
-          <br>
-      </div>
-
-    </header>
-
-    <img src="https://sep.yimg.com/ca/Img/trans_1x1.gif" height="5" width="1" border="0">
-    <img src="https://sep.yimg.com/ca/I/paulgraham_2272_1423" width="12" height="14" align="left" border="0" hspace="0" vspace="0">
-      <font size="2" face="verdana"><a href="worked.html">What I Worked On</a>
-      <img src="https://sep.yimg.com/ca/Img/trans_1x1.gif" height="2" width="1" border="0"><br></font>
-
-
-    <!-- </div> -->
-  </div>
-  
-  
-  
-
-  
-
-
+            <div class="post-title">
+                <img src="https://sep.yimg.com/ca/I/paulgraham_2272_1423" width="12" height="16" border="0" hspace="0" vspace="6" align="left">
+                <a class="my-post-title-link" href="/heapq%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/" itemprop="url">
+                  <span itemprop="name" style="color:#000099; font-size:16px" >heapq源码解读</span>
+                </a>
+            </div>
+          </div>
 
         </div>
-        
 
 <script>
   window.addEventListener('tabs:register', () => {
